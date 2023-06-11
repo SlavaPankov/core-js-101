@@ -188,7 +188,7 @@ function isInsideCircle(circle, point) {
  *   'entente' => null
  */
 function findFirstSingleChar(str) {
-  for (let i = 0; i < str.length; i++) {
+  for (let i = 0; i < str.length; i += 1) {
     const c = str.charAt(i);
     if (str.indexOf(c) === i && str.indexOf(c, i + 1) === -1) {
       return c;
@@ -383,7 +383,7 @@ function isBracketsBalanced(str) {
     '>': true,
   };
 
-  for (let i = 0; i < str.length; i++) {
+  for (let i = 0; i < str.length; i += 1) {
     const char = str[i];
 
     if (open[char]) {
@@ -468,11 +468,11 @@ function getMatrixProduct(m1, m2) {
   const m2CountCols = m2[0].length;
   const result = new Array(m1CountRows);
 
-  for (let i = 0; i < m1CountRows; i++) {
+  for (let i = 0; i < m1CountRows; i += 1) {
     result[i] = new Array(m2CountCols);
-    for (let j = 0; j < m2CountCols; j++) {
+    for (let j = 0; j < m2CountCols; j += 1) {
       result[i][j] = 0;
-      for (let k = 0; k < m1CountCols; k++) {
+      for (let k = 0; k < m1CountCols; k += 1) {
         result[i][j] += m1[i][k] * m2[k][j];
       }
     }
@@ -513,11 +513,11 @@ function getMatrixProduct(m1, m2) {
  *
  */
 function evaluateTicTacToePosition(position) {
-  for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < 3; i += 1) {
     let winX = true;
     let winY = true;
 
-    for (let j = 0; j < 3; j++) {
+    for (let j = 0; j < 3; j += 1) {
       if (position[j][i] !== position[0][i]) {
         winX = false;
       }

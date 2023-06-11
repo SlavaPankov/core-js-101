@@ -214,8 +214,8 @@ function getRectangleString(width, height) {
 
   let result = '';
 
-  for (let i = 0; i < height; i++) {
-    for (let j = 0; j < width; j++) {
+  for (let i = 0; i < height; i += 1) {
+    for (let j = 0; j < width; j += 1) {
       if (j === 0 && i === 0) {
         result += symbols.topLeftAngle;
       } else if (j === width - 1 && i === 0) {
@@ -261,7 +261,7 @@ function encodeToRot13(str) {
   const cipherAlphabet = 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm';
   let result = '';
 
-  for (let i = 0; i < str.length; i++) {
+  for (let i = 0; i < str.length; i += 1) {
     if (str[i].match(/[a-z]/i)) {
       result += cipherAlphabet[alphabet.indexOf(str[i])];
     } else {

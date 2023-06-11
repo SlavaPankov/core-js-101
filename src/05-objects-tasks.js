@@ -213,7 +213,7 @@ class CssSelectorCombination {
 
   stringify() {
     let result = ''.concat(this.selectors[0].stringify());
-    for (let i = 1; i < this.selectors.length; i++) {
+    for (let i = 1; i < this.selectors.length; i += 1) {
       result = result.concat(' ', this.combinators[i - 1], ' ', this.selectors[i].stringify());
     }
     return result;
